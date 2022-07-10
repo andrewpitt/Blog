@@ -48,7 +48,6 @@ public class BlogController {
     public Result detail(@PathVariable Integer id) {
         Blog blog = blogService.getById(id);
         Assert.notNull(blog, "该博客已被删除");
-
         return Result.success(blog);
     }
 
